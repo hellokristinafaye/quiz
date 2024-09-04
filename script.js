@@ -29,7 +29,7 @@ const questions = [
 ];
 
 const questionElement = document.getElementById("question")
-const answerButton = document.getElementById("answer-buttons")
+const answerButtons = document.getElementById("answer-buttons")
 const nextButton = document.getElementById("next-btn")
 
 let currentQuestionIndex = 0;
@@ -43,6 +43,9 @@ function startQuiz() {
 }
 
 function showQuestion() {
+    // to clear the previous question/answers
+    resetState();
+
     // going thru the questions
     let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
@@ -53,8 +56,16 @@ function showQuestion() {
         const button = document.createElement("button");
         button.innerHTML = answer.text;
         button.classList.add("btn");
-        answerButton.appendChild(button);
+        answerButtons.appendChild(button);
     });
+}
+
+function resetState() {
+    // this walks the dom and updates the rules like display
+    nextButton.style.display = "none";
+    while(answerButtons.firstChild) {
+        answerButtons.removeChild(answerButtons.firstChild);
+    }
 }
 
 startQuiz();
