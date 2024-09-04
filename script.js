@@ -12,17 +12,17 @@ const questions = [
         question: "Who won Illusion Cakes?",
         answers: [
             {text: "Keith", correct: true},
-            {text: "Eugene", correct: false},
+            {text: "Kwesi", correct: false},
             {text: "Marissa", correct: false},
-            {text: "Zach", correct: false},
+            {text: "Eugene", correct: false},
         ]
     },
     {
         question: "Who won Sandwiches?",
         answers: [
             {text: "Keith", correct: false},
-            {text: "Eugene", correct: false},
-            {text: "Marissa", correct: false},
+            {text: "Desiree", correct: false},
+            {text: "Jared", correct: false},
             {text: "Zach", correct: true},
         ]
     },
