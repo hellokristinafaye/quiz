@@ -41,3 +41,20 @@ function startQuiz() {
     nextButton.innerHTML = "Next";
     showQuestion();
 }
+
+function showQuestion() {
+    // going thru the questions
+    let currentQuestion = questions[currentQuestionIndex];
+    let questionNo = currentQuestionIndex + 1;
+    questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+    
+    // getting the answers for the buttons
+    currentQuestion.answers.forEach(answer => {
+        const button = document.createElement("button");
+        button.innerHTML = answer.text;
+        button.classList.add("btn");
+        answerButton.appendChild(button);
+    });
+}
+
+startQuiz();
