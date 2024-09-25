@@ -1,3 +1,4 @@
+// tiny data sets of questions/answers that I'm sure ought to be in their own file when they get bigger.
 const questions = [
     {
         question: "Who won Wedding Cakes?",
@@ -28,13 +29,16 @@ const questions = [
     },
 ];
 
+// variables that allow access to HTML elements via their ID's
 const questionElement = document.getElementById("question")
 const answerButtons = document.getElementById("answer-buttons")
 const nextButton = document.getElementById("next-btn")
 
+// variables that declare where to start in the questions, and the score
 let currentQuestionIndex = 0;
 let score = 0;
 
+// this is the function that triggers the quiz. it is called at the very bottom of this file, and inside the nextButton() function.  
 function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
@@ -42,7 +46,7 @@ function startQuiz() {
     showQuestion();
 }
 
-function showQuestion() {
+function showQuestion() {   
     // to clear the previous question/answers
     resetState();
 
