@@ -46,6 +46,7 @@ function startQuiz() {
     showQuestion();
 }
 
+// 
 function showQuestion() {   
     // to clear the previous question/answers
     resetState();
